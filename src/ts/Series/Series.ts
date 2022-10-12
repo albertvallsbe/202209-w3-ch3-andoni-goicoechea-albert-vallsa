@@ -54,3 +54,5 @@ const series: Series = [
     emmies: 0,
   },
 ];
+
+export default series;
