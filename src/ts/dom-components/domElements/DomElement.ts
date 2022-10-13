@@ -4,12 +4,14 @@ class DomElements implements DomComponentStructure {
   domElement: HTMLElement;
 
   constructor(
-    public parentElement: Element,
+    public parentElement: HTMLElement,
     public tag: string,
     public className: string
   ) {
     this.domElement = document.createElement(tag);
-    this.domElement.className = className;
+    if (className !== "") {
+      this.domElement.className = className;
+    }
   }
 
   render() {
